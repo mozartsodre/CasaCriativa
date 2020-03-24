@@ -11,71 +11,84 @@
 <html><!-- Tag HTML -->
     <head>
         <!-- Responsável por receber configurações da página -->
-        <meta charset="UTF-8">
-        <title>Casa Criativa</title>
+        <meta charset="UTF-8"> <!-- UTF-8 serve para fazer o navegador identificar caracteres especiais como ç, ã e por aí vai. -->
+        <title>Casa Criativa</title> 
         <!-- Na tag <style> mexemos com o estilo/aparência da página  -->
-        <style> 
-            /*
-            CSS (Cascading StyleSheet) - Folha de estilo em cascata
-            */
-
-            body {
-                background: #e5e5e5;
-                color: #25282B;
-                text-align: center;
-
-            }
-
-            button {
-                color: #ff5E84;
-                border: none;
-                font-weight: bold;
-                background: none;
-            }
-
-            .fat {
-                color: white;
-                background: #ff5E84;
-            }
-
-            #footer a {
-                color: #25282b;
-                text-decoration: none;
-            }
-
-            .hide {
-                display: none;
-            }
-
-        </style>
+        <style></style>
+        <!-- tag link é usada para conectar com outro arquivo, no caso o stylesheet seria o CSS -->
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <!--  -->
+        <div id="container">
+            <section id="intro">
         <!-- Responsável pelos itens que vão aparecer na página que o visitante acessa -->
-        <img src="logo.png" alt="Logomarca Casa Criativa"> <!-- tag <img> serve para adicionar uma imagem -->
-        <p>
-            Ficar em casa em períodos longos, não deve ser nada fácil.</p> <!-- a tag <p></p> server para indicar parágrafo -->
-        <p>
-            Por isso iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo</strong> que for necessário para tornar esse momento mais interessante.</p>
-        <p>
-            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.</p>
-        
-        <button>+ Adicionar Ideia</button> <!-- tag para criação de botões -->
-        <button class="fat">Ver Ideias</button>
+                <header><!-- Aqui é referente aos itens do cabeçalho da página -->
+                    <img src="logo.png" alt="Logomarca Casa Criativa"> <!-- tag <img> serve para adicionar uma imagem -->
+                </header>
+                <main> <!-- Aqui é referente aos conteúdos principais que estarão disponíveis em uma página -->
+                    <p>
+                    Ficar em casa em períodos longos, não deve ser nada fácil.</p> <!-- a tag <p></p> server para indicar parágrafo -->
+                    <p>
+                    Por isso iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo</strong> que for necessário para tornar esse momento mais interessante.</p>
+                    <p>
+                    Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.</p>
+                </main>
 
-        <p id="footer">Com ❤ <a href="http://rocketseat.com.br">Rocketseat</a></p>
+                <section id="buttons">
+                    <button>+ Adicionar Ideia</button> <!-- tag para criação de botões -->
+                    <button class="fat">Ver Ideias</button>
+                </section>
 
-        <!-- a tag <script> serve para introduzir o código javascript-->
-        <script>
-            document
-                .querySelector("button.fat")
-                .addEventListener("click", function(){
-                    document
-                        .querySelector("#footer")
-                        .classList
-                        .toggle("hide")
-                })
-        </script>
+                <footer> <!-- Referente ao que estará no rodapé da página -->
+                    <p id="footer">Com ❤ <a href="http://rocketseat.com.br">Rocketseat</a></p>
+                </footer>
+            </section>
 
+            <section id="last-ideias">
+                <div class="idea">
+                    <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" alt="Imagem de curso de programação">
+                    
+                    <div class="content">
+                        <h3>Cursos de Programação</h3>
+                        <p>Estudo</p>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste expedita, illo officiis laboriosam in consectetur! Delectus voluptatibus facere quasi culpa nihil nemo. Debitis nisi, corporis placeat tempora alias vitae tenetur?
+                    </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="https://image.flaticon.com/icons/svg/2729/2729005.svg" alt="Imagem de Exercícios">
+                
+                    <div class="content">
+                        <h3>Exercícios</h3>
+                        <p>Saúde</p>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste expedita, illo officiis laboriosam in consectetur! Delectus voluptatibus facere quasi culpa nihil nemo. Debitis nisi, corporis placeat tempora alias vitae tenetur?
+                    </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="https://image.flaticon.com/icons/svg/2729/2729027.svg" alt="Imagem de Meditação">
+                
+                    <div class="content">
+                        <h3>Meditação</h3>
+                        <p>Mentalidade</p>
+                    <div class="description">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste expedita, illo officiis laboriosam in consectetur! Delectus voluptatibus facere quasi culpa nihil nemo. Debitis nisi, corporis placeat tempora alias vitae tenetur?
+                    </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+            </section>
+        <!-- a tag <script> serve para introduzir o código javascript e quando src conecta com o arquivo .js-->
+            <script src="scripts.js"></script>
+        </div>
     </body>
     
 </html>

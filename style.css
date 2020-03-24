@@ -1,0 +1,113 @@
+/*
+CSS (Cascading StyleSheet) - Folha de estilo em cascata
+
+Tudo é BOX(caixa) num website e dentro delas tem outras caixas, textos ou imagens
+
+Espaçamentos
+Bordas
+Preenchimento
+
+Posicionamento
+
+*/
+
+body {
+    background: #e5e5e5;
+    color: #25282B;
+    margin: 0px;
+}
+
+.hide {
+    display: none;
+} 
+
+a {
+    color: #ff5E84;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#container {
+    width: 90%;
+    max-width: 980px;
+    margin: 40px auto;
+    display: flex;
+}
+
+#intro {
+    width: 300px;
+    margin-right: 20px;
+}
+
+main {
+    margin: 32px 0px;
+}
+
+#buttons{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 32px;
+}
+
+button {
+    background: none;
+    color: #ff5E84;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    text-decoration: underline;
+}
+
+.fat {
+    color: white;
+    background: #ff5E84;
+    width: 150px;
+    height: 40px;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px #ff5E8444;
+}
+
+button.fat:hover {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+}
+
+.idea {
+    display: flex;
+    margin-bottom: 32px;
+    background-color: #fff;
+    padding: 32px;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
+}
+
+.idea img {
+    width: 60px;
+    height: 60px;
+    margin-right: 32px;
+}
+
+.idea h3 {
+    margin: 0px;
+}
+
+.idea p {
+    margin: 8px 0;
+    color: #777;
+}
+
+.idea .description {
+    margin: 16px 0;
+}
+
