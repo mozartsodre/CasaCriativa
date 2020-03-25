@@ -17,9 +17,11 @@
         <style></style>
         <!-- tag link é usada para conectar com outro arquivo, no caso o stylesheet seria o CSS -->
         <link rel="stylesheet" href="style.css">
+        <!-- O link abaixo foi para utilizar fonts da Google dentro da página -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <!--  -->
+        
         <div id="container">
             <section id="intro">
         <!-- Responsável pelos itens que vão aparecer na página que o visitante acessa -->
@@ -36,7 +38,7 @@
                 </main>
 
                 <section id="buttons">
-                    <button>+ Adicionar Ideia</button> <!-- tag para criação de botões -->
+                    <button onclick="onOff()">+ Adicionar Ideia</button> <!-- tag para criação de botões -->
                     <button class="fat">Ver Ideias</button>
                 </section>
 
@@ -89,6 +91,45 @@
         <!-- a tag <script> serve para introduzir o código javascript e quando src conecta com o arquivo .js-->
             <script src="scripts.js"></script>
         </div>
+
+        <!-- Modal -->
+        <div id="modal" class="hide">
+            <div class="content">
+                <h1>Nova Ideia</h1>
+                <form action="">
+
+                    <div class="input-wrapper">
+                        <label for="title">Título da Ideia</label>
+                        <input type="text" name="title">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="category">Categoria</label>
+                        <input type="text" name="category">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="image">Link da Image</label>
+                        <input type="url" name="image">
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="description">Digite uma descrição para essa ideia</label>
+                        <textarea name="description" cols="30" rows="10"></textarea>
+                    </div>
+
+                    <div class="input-wrapper">
+                        <label for="link">Link da ideia</label>
+                        <input type="url" name="link">
+                    </div>
+
+                    <a href="#" onclick="onOff()">Voltar</a>
+                    <button>Salvar</button>
+
+                </form>
+            </div>
+        </div>
+
     </body>
     
 </html>
