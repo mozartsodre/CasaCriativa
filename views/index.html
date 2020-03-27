@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- HTML - HyperText Markup Language
+
+    Hypertext (Hipertexto) - São textos que aceitam conexões (links) e áudio visual para se conectar diferentes blocos de informações.
+
+    Markup (Marcação) - Aceita marcações feitas através de <tags>.
+
+    Language (linguagem) - Uma maneira de se escrever.
+
+-->
+<html><!-- Tag HTML -->
+    <head>
+        <!-- Responsável por receber configurações da página -->
+        <meta charset="UTF-8"> <!-- UTF-8 serve para fazer o navegador identificar caracteres especiais como ç, ã e por aí vai. -->
+        <title>Casa Criativa</title> 
+        <!-- Na tag <style> mexemos com o estilo/aparência da página  -->
+        <style></style>
+        <!-- tag link é usada para conectar com outro arquivo, no caso o stylesheet seria o CSS -->
+        <link rel="stylesheet" href="/style.css">
+        <!-- O link abaixo foi para utilizar fonts da Google dentro da página -->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,600,700,900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <div id="container">
+            <section id="intro">
+        <!-- Responsável pelos itens que vão aparecer na página que o visitante acessa -->
+                <header><!-- Aqui é referente aos itens do cabeçalho da página -->
+                    <a href="/">
+                        <img src="/logo.png" alt="Logomarca Casa Criativa"><!-- tag <img> serve para adicionar uma imagem -->
+                    </a> 
+                </header>
+                <main> <!-- Aqui é referente aos conteúdos principais que estarão disponíveis em uma página -->
+                    <p>
+                    Ficar em casa em períodos longos, não deve ser nada fácil.</p> <!-- a tag <p></p> server para indicar parágrafo -->
+                    <p>
+                    Por isso iremos catalogar <strong>ideias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo</strong> que for necessário para tornar esse momento mais interessante.</p>
+                    <p>
+                    Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicionando a sua ideia.</p>
+                </main>
+
+                <section id="buttons">
+                    <button onclick="onOff()">+ Adicionar Ideia</button> <!-- tag para criação de botões -->
+                    <a href="/ideias" class="button">Ver Ideias</a>
+                </section>
+
+                <footer> <!-- Referente ao que estará no rodapé da página -->
+                    <p id="footer">Com ❤ <a href="http://rocketseat.com.br" target="_blank">Rocketseat</a></p>
+                </footer>
+            </section>
+
+            <section id="last-ideias">
+
+                {% include "all_ideas.html" %}
+
+            </section>
+        <!-- a tag <script> serve para introduzir o código javascript e quando src conecta com o arquivo .js-->
+            <script src="/scripts.js"></script>
+        </div>
+
+        	{% include "modal.html" %}
+
+    </body>
+    
+</html>

@@ -1,0 +1,26 @@
+{
+  "name": "CasaCriativa",
+  "version": "1.0.0",
+  "description": "Projeto complementar da Semana OmniStack 11 voltado para quem deseja iniciar no desenvolvimento Web. Dando noções de HTML, CSS e Javascript.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mozartsodre/CasaCriativa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mozartsodre/CasaCriativa/issues"
+  },
+  "homepage": "https://github.com/mozartsodre/CasaCriativa#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "nunjucks": "^3.2.1"
+  }
+}
